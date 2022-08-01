@@ -3,7 +3,7 @@ using the products table and the categories table, return the product name and t
  
  
  
- s
+ 
  select products.name, categories.name
  from products 
  left join categories 
@@ -72,3 +72,15 @@ This query should return:
 -  the employee's first and last name
 -  the name of each product
 -  and how many of that product they sold */
+
+select employees.EmployeeID, employees.FirstName, employees.lastname, products.name, sales.Quantity
+from employees
+ inner join sales
+ on employees.employeeid=sales.employeeid
+ inner join products
+ on sales.Productid = products.productid;
+
+ 
+
+
+
